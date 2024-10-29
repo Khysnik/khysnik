@@ -268,7 +268,7 @@
 
 				}
 	`}));
-	const vertices=new Float32Array(300_000); //length must be divisible by 3
+	const vertices=new Float32Array(30); //length must be divisible by 3
 	for(let x=0;x<vertices.length;x++) vertices[x]=THREE.MathUtils.randFloatSpread(spread);
 	mesh.geometry.setAttribute("position",new THREE.Float32BufferAttribute(vertices,3));
 	scene.add(mesh);

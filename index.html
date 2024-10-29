@@ -206,6 +206,7 @@
 				</div>
 		</div>
 	</div>
+    <button id="startButton" style="position: absolute; top: 20px; left: 20px; padding: 10px 20px;">Start WebGL Stars</button>
 </body>
 <script type="importmap">
 	{
@@ -220,9 +221,9 @@
 	import {UnrealBloomPass} from "./three js/postprocessing/UnrealBloomPass.js";
 	import {EffectComposer} from "./three js/postprocessing/EffectComposer.js";
 	import {RenderPass} from "./three js/postprocessing/RenderPass.js";
-
+    function createWebGLStars() {
 	const scene=new THREE.Scene();
-	const renderer=new THREE.WebGLRenderer();
+	const renderer=new THREE.WebGLRenderer({antialias:true});
 	document.body.appendChild(renderer.domElement);
 	const camera=new THREE.PerspectiveCamera(90,window.innerWidth/window.innerHeight);
 	const composer=new EffectComposer(renderer);
@@ -308,5 +309,7 @@
 		composer.render(delta);
 	}
 	requestAnimationFrame(process);
+}
+document.getElementById("startButton").addEventListener("click", createWebGLStars);
 </script>
 </html>

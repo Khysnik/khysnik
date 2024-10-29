@@ -250,25 +250,22 @@
 				}
 			`,
 			vertexShader:`
-				uniform float time;
 				varying float pointsize;
 				varying vec3 v_position;
 				void main() {
-					vec3 pos=position+vec3(0.,0.,time)*50.;
-					pos.z=mod(pos.z+`+spread/2+`.,`+spread+`.)-`+spread/2+`.;
-					v_position=position;
+					vec3 pos = position + vec3(0., 0., time) * 50.;
+					pos.z = mod(pos.z + ${spread / 2}., ${spread}) - ${spread / 2}.;
+					v_position = position;
 
+					vec4 mvPosition = modelViewMatrix * vec4(pos, 1.0);
 
-					vec4 mvPosition = modelViewMatrix * vec4( pos , 1.0 );
-
-					gl_PointSize = 300.0 / - mvPosition.z;
-					pointsize=gl_PointSize;
+					gl_PointSize = 300.0 / -mvPosition.z;
+					pointsize = gl_PointSize;
 
 					gl_Position = projectionMatrix * mvPosition;
-
 				}
 	`}));
-	const vertices=new Float32Array(30); //length must be divisible by 3
+	const vertices=new Float32Array(300); //length must be divisible by 3
 	for(let x=0;x<vertices.length;x++) vertices[x]=THREE.MathUtils.randFloatSpread(spread);
 	mesh.geometry.setAttribute("position",new THREE.Float32BufferAttribute(vertices,3));
 	scene.add(mesh);

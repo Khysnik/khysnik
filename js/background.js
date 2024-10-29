@@ -8,10 +8,10 @@ function init() {
     aspectRatio = WIDTH / HEIGHT,
     nearPlane = 1,
     cameraZ = (farPlane = 3e3) / 3,
-    fogHex = 0,
+    fogHex = 0x2e004f,
     fogDensity = 7e-4,
-    (camera = new THREE.PerspectiveCamera(fieldOfView,aspectRatio,nearPlane,farPlane)).position.z = cameraZ,
-    (scene = new THREE.Scene).fog = new THREE.FogExp2(fogHex,fogDensity),
+    (camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane)).position.z = cameraZ,
+    (scene = new THREE.Scene).fog = new THREE.FogExp2(fogHex, fogDensity),
     (container = document.createElement("div")).id = "background",
     container.style.opacity = 0,
     document.body.appendChild(container),
@@ -19,7 +19,7 @@ function init() {
     document.body.style.overflow = "hidden",
     geometry = new THREE.Geometry,
     particleCount = 1e3,
-    i = 0; i < particleCount; i++) {
+    i = 0;i < particleCount; i++) {
         var e = new THREE.Vector3;
         e.x = 2e3 * Math.random() - 1e3,
         e.y = 2e3 * Math.random() - 1e3,

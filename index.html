@@ -199,14 +199,15 @@
 				<p>So yeah this is my site I guess</p>
 			</div>
 			<h2>My Projects</h2>
-				<div class="intro">
-						<ul>uhhh</ul>
-				</div>
-				<div id="oldbuttonmenu">
-					<img src="https://cyber.dabamos.de/88x31/csnation2.gif" class="oldbutton" width="88" height="31">
-					<img src="https://anlucas.neocities.org/built_with_amiga02.gif" class="oldbutton" width="88" height="31">
-				</div>
-				<button id="startButton">silly webgl</button>
+			<div class="intro">
+				<ul>uhhh</ul>
+			</div>
+			<div id="oldbuttonmenu">
+				<img src="https://cyber.dabamos.de/88x31/csnation2.gif" class="oldbutton" width="88" height="31">
+				<img src="https://anlucas.neocities.org/built_with_amiga02.gif" class="oldbutton" width="88"
+					height="31">
+			</div>
+			<button id="startButton">silly webgl</button>
 		</div>
 	</div>
 </body>
@@ -220,25 +221,25 @@
 
 <script type="module">
 	import * as THREE from "three";
-	import {UnrealBloomPass} from "./three js/postprocessing/UnrealBloomPass.js";
-	import {EffectComposer} from "./three js/postprocessing/EffectComposer.js";
-	import {RenderPass} from "./three js/postprocessing/RenderPass.js";
-    function createWebGLStars() {
-	const scene=new THREE.Scene();
-	const renderer=new THREE.WebGLRenderer({antialias:true});
-	document.body.appendChild(renderer.domElement);
-	const camera=new THREE.PerspectiveCamera(90,window.innerWidth/window.innerHeight);
-	const composer=new EffectComposer(renderer);
-	composer.addPass(new RenderPass(scene,camera));
-	composer.addPass(new UnrealBloomPass());
+	import { UnrealBloomPass } from "./three js/postprocessing/UnrealBloomPass.js";
+	import { EffectComposer } from "./three js/postprocessing/EffectComposer.js";
+	import { RenderPass } from "./three js/postprocessing/RenderPass.js";
+	function createWebGLStars() {
+		const scene = new THREE.Scene();
+		const renderer = new THREE.WebGLRenderer({ antialias: true });
+		document.body.appendChild(renderer.domElement);
+		const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight);
+		const composer = new EffectComposer(renderer);
+		composer.addPass(new RenderPass(scene, camera));
+		composer.addPass(new UnrealBloomPass());
 
 
-	const spread=750;
-	const mesh=new THREE.Points(
-		new THREE.BufferGeometry(),
-		new THREE.ShaderMaterial({
-			uniforms:{time:{value:1}},
-			fragmentShader:`
+		const spread = 750;
+		const mesh = new THREE.Points(
+			new THREE.BufferGeometry(),
+			new THREE.ShaderMaterial({
+				uniforms: { time: { value: 1 } },
+				fragmentShader: `
 				varying float pointsize;
 				varying vec3 v_position;
 
@@ -252,6 +253,8 @@
 					gl_FragColor=vec4((vec3(1.,0.,1.)*gradient+vec3(0.,1.,1.)*(1.-gradient))*min(1.,pointsize),1.);
 				gl_FragColor.a *= smoothstep(0.0, 1.0, pointsize / 10.0); // Add trail effect
 			}
+		`,
+				fogShader: `
 			// Add fog effect
 			#ifdef GL_ES
 			precision mediump float;
@@ -272,14 +275,14 @@
 				float fogFactor = smoothstep(fogNear, fogFar, depth);
 				gl_FragColor.rgb = mix(gl_FragColor.rgb, fogColor, fogFactor);
 			}
-		`,
-			vertexShader:`
+			`,
+				vertexShader: `
 				uniform float time;
 				varying float pointsize;
 				varying vec3 v_position;
 				void main() {
 					vec3 pos=position+vec3(0.,0.,time)*50.;
-					pos.z=mod(pos.z+`+spread/2+`.,`+spread+`.)-`+spread/2+`.;
+					pos.z=mod(pos.z+`+ spread / 2 + `.,` + spread + `.)-` + spread / 2 + `.;
 					v_position=position;
 
 
@@ -292,47 +295,48 @@
 
 				}
 	`}));
-	const vertices=new Float32Array(3300); //length must be divisible by 3
-	for(let x=0;x<vertices.length;x++) vertices[x]=THREE.MathUtils.randFloatSpread(spread);
-	mesh.geometry.setAttribute("position",new THREE.Float32BufferAttribute(vertices,3));
-	scene.add(mesh);
+		const vertices = new Float32Array(3300); //length must be divisible by 3
+		for (let x = 0; x < vertices.length; x++) vertices[x] = THREE.MathUtils.randFloatSpread(spread);
+		mesh.geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+		scene.add(mesh);
 
 
-	const targetrot=new THREE.Vector2();
-	function rotate_camera(e){
-		if(e.type==="touchmove") e=e.touches[0];
-		targetrot.y=-(e.clientX-window.innerWidth/2)/window.innerWidth;
-		targetrot.x=-(e.clientY-window.innerHeight/2)/window.innerHeight;
-	}
+		const targetrot = new THREE.Vector2();
+		function rotate_camera(e) {
+			if (e.type === "touchmove") e = e.touches[0];
+			targetrot.y = -(e.clientX - window.innerWidth / 2) / window.innerWidth;
+			targetrot.x = -(e.clientY - window.innerHeight / 2) / window.innerHeight;
+		}
 
-	addEventListener("mousemove",rotate_camera);
-	addEventListener("touchmove",rotate_camera);
+		addEventListener("mousemove", rotate_camera);
+		addEventListener("touchmove", rotate_camera);
 
-	onresize=function(){
-		camera.aspect=window.innerWidth/window.innerHeight;
-		camera.updateProjectionMatrix();
-		renderer.setSize(window.innerWidth,window.innerHeight);
-		composer.setSize(window.innerWidth,window.innerHeight);
-	};
-	onresize();
+		onresize = function () {
+			camera.aspect = window.innerWidth / window.innerHeight;
+			camera.updateProjectionMatrix();
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			composer.setSize(window.innerWidth, window.innerHeight);
+		};
+		onresize();
 
-	let then=0;
-	function process(now){
+		let then = 0;
+		function process(now) {
+			requestAnimationFrame(process);
+			if (then === now) return;
+			const delta = (now - then) / 1000;
+			then = now;
+
+			const lerp = Math.min(delta, 1);
+			camera.rotation.x = camera.rotation.x * (1 - lerp) + targetrot.x * lerp;
+			camera.rotation.y = camera.rotation.y * (1 - lerp) + targetrot.y * lerp;
+
+			mesh.material.uniforms.time.value += delta;
+
+			composer.render(delta);
+		}
 		requestAnimationFrame(process);
-		if(then===now) return;
-		const delta=(now-then)/1000;
-		then=now;
-
-		const lerp=Math.min(delta,1);
-		camera.rotation.x=camera.rotation.x*(1-lerp)+targetrot.x*lerp;
-		camera.rotation.y=camera.rotation.y*(1-lerp)+targetrot.y*lerp;
-
-		mesh.material.uniforms.time.value+=delta;
-
-		composer.render(delta);
 	}
-	requestAnimationFrame(process);
-}
-document.getElementById("startButton").addEventListener("click", createWebGLStars);
+	document.getElementById("startButton").addEventListener("click", createWebGLStars);
 </script>
+
 </html>

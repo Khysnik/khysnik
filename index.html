@@ -206,7 +206,7 @@
 					<img src="https://cyber.dabamos.de/88x31/csnation2.gif" class="oldbutton" width="88" height="31">
 					<img src="https://anlucas.neocities.org/built_with_amiga02.gif" class="oldbutton" width="88" height="31">
 				</div>
-				<button id="startButton">Start WebGL Stars</button>
+				<button id="startButton">silly webgl</button>
 		</div>
 	</div>
 </body>
@@ -250,7 +250,8 @@
 					if(distance(gl_PointCoord,vec2(.5))>.5) discard;
 					float gradient=rand(vec2(rand(v_position.xy),v_position.z));
 					gl_FragColor=vec4((vec3(1.,0.,1.)*gradient+vec3(0.,1.,1.)*(1.-gradient))*min(1.,pointsize),1.);
-				}
+				gl_FragColor.a *= smoothstep(0.0, 1.0, pointsize / 10.0); // Add trail effect
+			}
 			`,
 			vertexShader:`
 				uniform float time;
@@ -271,7 +272,7 @@
 
 				}
 	`}));
-	const vertices=new Float32Array(3000); //length must be divisible by 3
+	const vertices=new Float32Array(3300); //length must be divisible by 3
 	for(let x=0;x<vertices.length;x++) vertices[x]=THREE.MathUtils.randFloatSpread(spread);
 	mesh.geometry.setAttribute("position",new THREE.Float32BufferAttribute(vertices,3));
 	scene.add(mesh);

@@ -252,7 +252,27 @@
 					gl_FragColor=vec4((vec3(1.,0.,1.)*gradient+vec3(0.,1.,1.)*(1.-gradient))*min(1.,pointsize),1.);
 				gl_FragColor.a *= smoothstep(0.0, 1.0, pointsize / 10.0); // Add trail effect
 			}
-			`,
+			// Add fog effect
+			#ifdef GL_ES
+			precision mediump float;
+			#endif
+
+			uniform vec3 fogColor;
+			uniform float fogNear;
+			uniform float fogFar;
+
+			void main() {
+				if(distance(gl_PointCoord, vec2(.5)) > .5) discard;
+				float gradient = rand(vec2(rand(v_position.xy), v_position.z));
+				gl_FragColor = vec4((vec3(1., 0., 1.) * gradient + vec3(0., 1., 1.) * (1. - gradient)) * min(1., pointsize), 1.);
+				gl_FragColor.a *= smoothstep(0.0, 1.0, pointsize / 10.0); // Add trail effect
+
+				// Fog calculation
+				float depth = gl_FragCoord.z / gl_FragCoord.w;
+				float fogFactor = smoothstep(fogNear, fogFar, depth);
+				gl_FragColor.rgb = mix(gl_FragColor.rgb, fogColor, fogFactor);
+			}
+		`,
 			vertexShader:`
 				uniform float time;
 				varying float pointsize;

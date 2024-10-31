@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "GOOD LUCK I'M BEHIND 7 PROXIES"
+AuthUserFile /mnt/data/windows93/xn--xp8haa/public/trollbox/spy/.htpasswd
+Require valid-user

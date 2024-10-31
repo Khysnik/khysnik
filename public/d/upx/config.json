@@ -1,0 +1,44 @@
+{
+    "algo": "cryptonight-upx/2",
+    "api": {
+        "port": 0,
+        "access-token": null,
+        "id": null,
+        "worker-id": null,
+        "ipv6": false,
+        "restricted": true
+    },
+    "asm": true,
+    "autosave": true,
+    "background": false,
+    "colors": true,
+    "cpu-affinity": false,
+    "cpu-priority": null,
+    "donate-level": 1,
+    "huge-pages": true,
+    "hw-aes": null,
+    "log-file": null,
+    "max-cpu-usage": 100,
+    "av": 1,
+    "pools": [
+        {
+            "url": "upx.miningocean.org:4332",
+            "user": "UPX1YwmH8PfCLALqna1B7thzYnzxBnNPCE97VTReoAehWpXBYF9pVoFcWV2mugCngGRYNNKEmGMUzVSUw5wTCaSM19bpJpWgBd",
+            "pass": "p1",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": false,
+            "variant": 1,
+            "tls": false,
+            "tls-fingerprint": null
+        }
+    ],
+        "print-time": 60,
+    "retries": 5,
+    "retry-pause": 5,
+    "safe": false,
+    "threads": 6,
+    "user-agent": null,
+    "watch": false
+    
+}

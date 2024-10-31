@@ -1,0 +1,304 @@
+/*.ui_explorer_window {
+  opacity: .9;
+}*/
+.ui_explorer_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  .ui_explorer__panes--tree {
+    flex 0 0 auto
+    border-right 1px solid #999;
+  }
+
+  .ui_explorer {
+    flex: 1;
+    overflow-y: auto;
+  }
+  .ui_explorer--column {
+    overflow-x: auto;
+  }
+}
+
+
+/*
+  88  dP""b8  dP"Yb  88b 88 .dP"Y8
+  88 dP   `" dP   Yb 88Yb88 `Ybo."
+  88 Yb      Yb   dP 88 Y88 o.`Y8b
+  88  YboodP  YbodP  88  Y8 8bodP'
+*/
+
+.ui_icon > .ico,
+.ui_icon > img,
+.ui_icon > span {
+  //cursor: pointer;
+  pointer-events: auto;
+}
+
+.ui_icon:hover {
+  z-index: 999 !important;
+}
+.ui_icon > .ico,
+.ui_icon > img {
+  box-sizing: content-box;
+  image-rendering:optimizeSpeed;             // Legal fallback
+  image-rendering:-moz-crisp-edges;          // Firefox
+  image-rendering:-o-crisp-edges;            // Opera
+  image-rendering:-webkit-optimize-contrast; // Safari
+  image-rendering:optimize-contrast;         // CSS3 Proposed
+  image-rendering:crisp-edges;               // CSS4 Proposed
+  image-rendering:pixelated;                 // CSS4 Proposed
+  -ms-interpolation-mode:nearest-neighbor;   // IE8+
+}
+.ui_icon {
+  //cursor: pointer;
+  pointer-events: none;
+  //border: 1px solid red
+}
+
+.ui_icon.ui_selected > span {
+  outline-color: rgba(255,255,255,0.8);
+  background: #0090E4;
+  color: #fff;
+  text-shadow: 0 0 transparent;
+}
+
+.ui_icon--cut {
+  opacity: .6;
+}
+
+//.ui_explorer_ghosts, // for drag ghosts...
+.ui_explorer--details,
+.ui_explorer--column,
+.ui_explorer--list,
+.ui_explorer--workspace,
+.ui_explorer--workspace--full,
+.ui_explorer--icons {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  //padding: 5px;
+
+  > .ui_icon {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    width: 72px;
+    z-index: 0;
+    line-height: 12px;
+    //pointer-events: none;
+    margin-bottom: 2px;
+
+    padding-top: 5px;
+    padding-left: 1px;
+  }
+  > .ui_icon > img,
+  > .ui_icon > .ico {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: auto;
+    // use border bottom instead of margin to avoid no pointer event gap
+    border-bottom: 1px solid transparent;
+  }
+  > .ui_icon > span {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 1px 2px;
+    padding-left: 2px;
+    max-width: 100%;
+    max-height: 26px;
+  }
+  > .ui_icon--focus,
+  > .ui_icon--focus,
+  > .ui_icon:focus {
+    outline: 0 none;
+    z-index: 1;
+    > span {
+       outline-color: rgba(0,0,0,0.8);
+       outline-style: dotted;
+       outline-width: 1px;
+       outline-offset: -1px;
+       text-overflow: none;
+       word-break break-word
+       word-wrap break-word
+       max-height: 100px;
+    }
+  }
+}
+
+
+/*
+   dP""b8  dP"Yb  88     88   88 8b    d8 88b 88
+  dP   `" dP   Yb 88     88   88 88b  d88 88Yb88
+  Yb      Yb   dP 88  .o Y8   8P 88YbdP88 88 Y88
+   YboodP  YbodP  88ood8 `YbodP' 88 YY 88 88  Y8
+*/
+
+.ui_explorer--column {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  .ui_icon {
+    height: auto;
+    //display: inline-block;
+    width: 160px;//25%;
+    text-align: left;
+    display: flex;
+  }
+  .ui_icon > img,
+  .ui_icon > .ico {
+    //display: inline-block;
+    flex: 0 0 16px;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    // use border bottom instead of margin to avoid no pointer event gap
+    border-right: 1px solid transparent;
+  }
+  .ui_icon > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .ui_icon:focus > span {
+    text-overflow: none;
+    position: absolute;
+    max-width: 500px;
+  }
+}
+
+
+/*
+  88     88 .dP"Y8 888888
+  88     88 `Ybo."   88
+  88  .o 88 o.`Y8b   88
+  88ood8 88 8bodP'   88
+*/
+
+.ui_explorer--details,
+.ui_explorer--list {
+  padding: 5px;
+
+  .ui_icon {
+    height: auto;
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    display: flex;
+    padding: 0;
+  }
+  .ui_icon > img,
+  .ui_icon > .ico {
+    flex: 0 0 16px;
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    image-rendering: auto;
+    vertical-align: top;
+    // use border bottom instead of margin to avoid no pointer event gap
+    border-right: 1px solid transparent;
+  }
+}
+
+
+/*
+  Yb        dP  dP"Yb  88""Yb 88  dP .dP"Y8 88""Yb    db     dP""b8 888888
+   Yb  db  dP  dP   Yb 88__dP 88odP  `Ybo." 88__dP   dPYb   dP   `" 88__
+    YbdPYbdP   Yb   dP 88"Yb  88"Yb  o.`Y8b 88"""   dP__Yb  Yb      88""
+     YP  YP     YbodP  88  Yb 88  Yb 8bodP' 88     dP""""Yb  YboodP 888888
+*/
+
+
+.ui_explorer--workspace {
+  overflow-x: hidden;
+  overflow-y: hidden!important;
+  position: relative;
+  .ui_explorer__scrollview {
+    display: block;
+  }
+  /*.ui_icon {
+    padding-top: 5px;
+    padding-left: 1px;
+    //box-shadow : inset 0 0 0 1px red;
+  }*/
+}
+
+.ui_explorer--workspace.ui_explorer--workspace--full {
+  overflow-x: hidden;
+  overflow-y: auto!important;
+  /*display: flex;
+  flex-direction: column; //row;
+  flex-wrap: wrap;
+  align-content: flex-start;*/
+  .ui_icon {
+    position: static!important;
+  }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+
+.ui_icon.ui_dropzone--droppable {
+  background: rgba(0, 128, 203, .1);
+  outline: 1px dashed rgba(0,0,0,.7) !important;
+  outline-offset: -3px !important;
+}
+
+.ui_explorer--local.ui_dropzone--droppable {
+  border-color: #000;
+  outline: 1px dashed rgba(0,0,0,.7) !important;
+  outline-offset: -4px !important;
+}
+
+.ui_explorer--workspace.ui_dropzone--droppable {
+  outline: 2px dashed rgba(0,0,0,.5) !important;
+  outline-offset: -6px !important;
+}
+
+.ui_explorer--not_local.ui_dropzone--droppable {
+  border-color: #f00;
+}
+
+
+.ui_explorer__selected_file {
+  width: 100%;
+}
+.ui_explorer__selected_file,
+.ui_explorer__selected_file:focus {
+  outline: 0 none !important;
+  background: transparent !important;
+  color: inherit;
+  margin: 1px 0;
+  margin-top: 2px;
+}
+
+.ui_explorer__save_cont {
+  margin: 1px 0;
+  margin-top: 2px;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+.ui_editor__footer {
+  padding: 1px;
+  text-align: right;
+  padding-right: 4px;
+}

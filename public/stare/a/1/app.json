@@ -1,0 +1,11 @@
+{
+    "name": "test",
+    "dev": [1],
+    "about": "This is a test app",
+    "category": "test",
+    "type": "js",
+    "version": "1.0",
+    "likes": 0,
+    "ban": false,
+    "date": 1568230390000
+}

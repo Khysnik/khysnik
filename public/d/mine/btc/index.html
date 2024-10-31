@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script src="/c/libs/jquery.min.js"></script>
+<script src="plotly-latest.min.js"></script>
+<script src="synaptic.min.js"></script>
+  <script>
+
+
+
+
+    var json;
+    var market;
+    var trace;
+    //
+    var retro = 3;
+    var inputLayer;
+    var hiddenLayer;
+    var outputLayer;
+    var myNetwork;
+    //
+    $( document ).ready(function() {
+      json = $.getJSON("market-price.json", function (data) {
+      market = data.values;
+      
+
+      inputLayer = new synaptic.Layer(retro);  
+      hiddenLayer = new synaptic.Layer(3);  
+      outputLayer = new synaptic.Layer(1);
+      inputLayer.project(hiddenLayer);  
+      hiddenLayer.project(outputLayer);
+
+      myNetwork = new synaptic.Network({  
+       input: inputLayer,
+       hidden: [hiddenLayer],
+       output: outputLayer
+      });
+
+
+      /*
+      trace1 = {
+        x: [1, 2, 3, 4],
+        y: [10, 15, 13, 17],
+        type: 'scatter'
+      };
+      */
+
+      var trace1 = {
+        x: [],
+        y: [],
+        type: 'scatter'
+      };
+
+
+      var diff = {
+        x: [0],
+        y: [0],
+        type: 'scatter'
+      }
+
+      var multiplier = {
+        x: [0],
+        y: [0],
+        type: 'scatter'
+      }
+
+      var less=market[0].x;
+      for (var i = 0; i < market.length; i++) {
+        
+        trace1["x"][i]=new Date(market[i].x*1000);
+        trace1["y"][i]=market[i].y;
+
+        diff["x"][i]=new Date(market[i].x*1000);
+        multiplier["x"][i]=new Date(market[i].x*1000);
+
+        
+
+        if (i>0) {
+          diff["y"][i] = market[i].y-market[i-1].y;
+          multiplier["y"][i] = (market[i].y/market[i-1].y);
+        };
+
+
+      };
+
+
+      var learningRate = .3;
+
+      // train the network - learn XOR
+      console.log('start training...');
+
+      for (var k = 0; k < 1000; k++) {
+
+        //console.log('iteration: '+k);
+
+        for (var i = retro; i < market.length; i++) {
+            temp=[]
+          for (var j = -retro; j < 0; j++) {
+            temp.push(market[i+j].y)
+          };
+
+           // retro
+            // 0,0 => 0
+            //
+           
+           //console.log(i+': '+temp+'='+market[i].y)
+           // console.log(temp)
+
+           myNetwork.activate(temp);
+           myNetwork.propagate(learningRate, market[i].y);
+
+            /*
+          if (i==0) {
+              console.log('hey')
+              console.log(temp)
+            };
+            */
+
+        };
+
+      }
+      console.log('training done!');
+      
+      
+
+      data = [trace1,multiplier];
+      Plotly.newPlot('myDiv', data);
+
+    });
+      
+    });
+  </script>
+<body>
+  <div id='myDiv'></div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+/* oocss
+========
+thanks: knacss.css &
+*/
+
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a.unstyled {
+  color: inherit;
+  text-decoration: none;
+}
+
+button.unstyled {
+  background: transparent;
+  border: 0 none;
+  box-shadow: none;
+}
+
+.textarea-resize-vertical {
+  resize: vertical;
+}
+
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.inherit {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.txtcenter {
+  text-align: center;
+}
+.txtleft {
+  text-align: left;
+}
+.txtright {
+  text-align: right;
+}
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+.transparent {
+  opacity: 0 !important;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+
+.overflow {
+  overflow: auto;
+}
+
+.noscroll {
+  overflow: hidden !important;
+}
+.u-scroll-y {
+  overflow-y: scroll !important;
+}
+
+.nocursor, .nocursor * {
+  cursor: none !important;
+}
+
+.nopointer, .nopointer * {
+  pointer-events: none !important;
+}
+
+.pixelated {
+  image-rendering:optimizeSpeed;             // Legal fallback
+  image-rendering:-moz-crisp-edges;          // Firefox
+  image-rendering:-o-crisp-edges;            // Opera
+  image-rendering:-webkit-optimize-contrast; // Safari
+  image-rendering:optimize-contrast;         // CSS3 Proposed
+  image-rendering:crisp-edges;               // CSS4 Proposed
+  image-rendering:pixelated;                 // CSS4 Proposed
+  -ms-interpolation-mode:nearest-neighbor;   // IE8+
+}
+
+.fillspace,
+.fullscreen /*deprecated*/ {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  /*width:auto;
+  height:auto;*/
+  width: 100%;
+  height: 100%;
+  display:block;
+  margin: 0
+}
+.static {position: static}
+.relative {position: relative}
+.absolute {position: absolute}
+.fixed {position: fixed}
+
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l = all,top,right,bottom,left
+source https://github.com/stubbornella/oocss/blob/master/core/spacing/space.css
+*/
+.ma0  { margin: 0 }
+.ma1  { margin: 1px }
+.ma2  { margin: 2px }
+.ma5  { margin: 5px }
+.ma10 { margin: 10px }
+.ma20 { margin: 20px }
+.ma30 { margin: 30px }
+.pa0  { padding: 0 }
+.pa1  { padding: 1px }
+.pa2  { padding: 2px }
+.pa5  { padding: 5px }
+.pa10 { padding: 10px }
+.pa20 { padding: 20px }
+.pa30 { padding: 30px }
+
+.mt0  { margin-top: 0 }
+.mt1  { margin-top: 1px }
+.mt2  { margin-top: 2px }
+.mt5  { margin-top: 5px }
+.mt10 { margin-top: 10px }
+.mt20 { margin-top: 20px }
+.mt30 { margin-top: 30px }
+.mr0  { margin-right: 0 }
+.mr1  { margin-right: 1px }
+.mr2  { margin-right: 2px }
+.mr5  { margin-right: 5px }
+.mr10 { margin-right: 10px }
+.mr20 { margin-right: 20px }
+.mr30 { margin-right: 30px }
+.mb0  { margin-bottom: 0 }
+.mb1  { margin-bottom: 1px }
+.mb2  { margin-bottom: 2px }
+.mb5  { margin-bottom: 5px }
+.mb10 { margin-bottom: 10px }
+.mb20 { margin-bottom: 20px }
+.mb30 { margin-bottom: 30px }
+.ml0  { margin-left: 0 }
+.ml1  { margin-left: 1px }
+.ml2  { margin-left: 2px }
+.ml5  { margin-left: 5px }
+.ml10 { margin-left: 10px }
+.ml20 { margin-left: 20px }
+.ml30 { margin-left: 30px }
+
+.pt0  { padding-top: 0 }
+.pt1  { padding-top: 1px }
+.pt2  { padding-top: 2px }
+.pt5  { padding-top: 5px }
+.pt10 { padding-top: 10px }
+.pt20 { padding-top: 20px }
+.pt30 { padding-top: 30px }
+.pr0  { padding-right: 0 }
+.pr1  { padding-right: 1px }
+.pr2  { padding-right: 2px }
+.pr5  { padding-right: 5px }
+.pr10 { padding-right: 10px }
+.pr20 { padding-right: 20px }
+.pr30 { padding-right: 30px }
+.pb0  { padding-bottom: 0 }
+.pb1  { padding-bottom: 1px }
+.pb2  { padding-bottom: 2px }
+.pb5  { padding-bottom: 5px }
+.pb10 { padding-bottom: 10px }
+.pb20 { padding-bottom: 20px }
+.pb30 { padding-bottom: 30px }
+.pl0  { padding-left: 0 }
+.pl1  { padding-left: 1px }
+.pl2  { padding-left: 2px }
+.pl5  { padding-left: 5px }
+.pl10 { padding-left: 10px }
+.pl20 { padding-left: 20px }
+.pl30 { padding-left: 30px }
+
+
+/* blocks widths (percentages and pixels) */
+.w1      { width: 1% }
+.w5      { width: 5% }
+.w10     { width: 10% }
+.w20     { width: 20% }
+.w25     { width: 25% }
+.w30     { width: 30% }
+.w33     { width: 33.3333% }
+.w40     { width: 40% }
+.w50     { width: 50% }
+.w60     { width: 60% }
+.w66     { width: 66.6666% }
+.w70     { width: 70% }
+.w75     { width: 75% }
+.w80     { width: 80% }
+.w90     { width: 90% }
+.w100    { width: 100% }
+
+/*.h0p     { height: 0px }
+.h1p     { height: 1px }
+.h16p    { height: 16px }
+.h32p    { height: 32px }*/
+.h1      { height: 1% }
+.h100    { height: 100% }
+
+.h0p     { height: 0px }
+.h1p     { height: 1px }
+.h5p     { height: 5px }
+.h10p    { height: 10px }
+.h16p    { height: 16px }
+.h20p    { height: 20px }
+.h30p    { height: 30px }
+.h32p    { height: 32px }
+.h40p    { height: 40px }
+.h50p    { height: 50px }
+.h100p   { height: 100px }
+.h150p   { height: 150px }
+.h200p   { height: 200px }
+.h300p   { height: 300px }
+.h400p   { height: 400px }
+.h500p   { height: 500px }
+.h600p   { height: 600px }
+.h700p   { height: 700px }
+.h800p   { height: 800px }
+.h960p   { height: 960px }
+
+.w0p     { width: 0px }
+.w1p     { width: 1px }
+.w5p     { width: 5px }
+.w10p    { width: 10px }
+.w16p    { width: 16px }
+.w20p    { width: 20px }
+.w30p    { width: 30px }
+.w32p    { width: 32px }
+.w40p    { width: 40px }
+.w50p    { width: 50px }
+.w100p   { width: 100px }
+.w150p   { width: 150px }
+.w200p   { width: 200px }
+.w300p   { width: 300px }
+.w400p   { width: 400px }
+.w500p   { width: 500px }
+.w600p   { width: 600px }
+.w700p   { width: 700px }
+.w800p   { width: 800px }
+.w960p   { width: 960px }
+.mw960p  { max-width: 960px }
+.w1140p  { width: 1140px }
+.mw1140p { max-width: 1140px }
+
+/* flexbox layout
+Tutorial: http://knacss.com/demos/tutoriel.html#flex */
+
+.flex {
+  display: flex;
+}
+.flex--row {
+  flex-direction: row;
+}
+.flex--column {
+  flex-direction: column;
+}
+.flex--wrap {
+  flex-wrap: wrap;
+}
+.flex__fluid {
+  flex: 1;
+}
+.flex0 {
+  flex: 0;
+}
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+
+/* responsive */
+.resp {
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .resp {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .resp {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .resp {
+    width: 1170px;
+  }
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+/*.underline {
+  text-decoration: underline;
+}
+.strikethrough {
+  text-decoration: line-through;
+}*/
+/*.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+/*.inbl {
+  display: inline-block;
+  vertical-align: top;
+}*/
+/* table layout */
+/*.row {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.line {
+  display: table-row;
+}
+.row > *,
+.line > *,
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.vcenter {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}*/

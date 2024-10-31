@@ -1,0 +1,157 @@
+
+// reset
+/////////////////////////////////////////////////////////////////////////////////
+
+*, *:before, *:after
+  box-sizing border-box
+
+html, body
+  height 100%
+  overflow hidden
+
+html
+  font-size 1em
+  line-height 1.4
+
+::selection 
+  background #b3d4fc
+  text-shadow none
+
+template
+  display none
+
+iframe
+  border 0 none
+  background transparent
+
+canvas
+  image-rendering optimizeSpeed
+  image-rendering -moz-crisp-edges
+  image-rendering -webkit-optimize-contrast
+  image-rendering -o-crisp-edges
+  image-rendering crisp-edges
+  -ms-interpolation-mode nearest-neighbor
+  vertical-align top
+
+.button, button, textarea, input, select, label
+  border 0 none
+  padding 7px //0.7em 0.8em
+  vertical-align top
+  font-family inherit
+  font-size inherit
+  display inline-block
+  outline 0 none
+  &:focus
+    outline 0 none
+
+::-webkit-input-placeholder // webkit placeholder bugfix
+  line-height 1.2
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  cursor pointer
+  -webkit-appearance button
+
+select::-moz-focus-inner,
+button::-moz-focus-inner,
+input[type='button']::-moz-focus-inner,
+input[type='reset']::-moz-focus-inner,
+input[type='submit']::-moz-focus-inner
+  border 0
+  padding 0
+  outline 0
+  //outline-offset -2px
+
+select
+  //line-height 1
+  //-webkit-appearance none
+  //-moz-appearance none
+  //appearance none
+  //height 30px
+  //padding  0 9px
+  outline 0 none
+  cursor pointer
+  &:focus, &:hover, &:active
+    -o-transform rotate(0)
+
+select:-moz-focusring
+  color transparent
+  text-shadow 0 0 0 #000
+
+input, select, button, label
+  line-height 1
+  height 30px
+  min-height 30px
+  overflow hidden
+  //padding 8px
+
+textarea
+  resize none
+  height auto
+  overflow auto
+
+input[type="checkbox"],
+input[type="radio"]
+  margin 7px 0
+  padding 0
+
+label input[type="checkbox"],
+label input[type="radio"]
+  margin 0
+  height 17px
+  min-height 17px
+
+
+// HTML5
+input[type='number']
+  -moz-appearance textfield
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance none
+  
+input[type="range"]
+  -webkit-appearance none !important
+  appearance none
+  tap-highlight-color rgba(255, 255, 255, 0)
+  width 100%
+  border none
+  outline none
+
+input[type="range"]::-moz-range-track
+  border inherit
+  background transparent
+
+input[type="range"]::-ms-track
+  border inherit
+  color transparent
+  background transparent
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper
+  background transparent
+
+input[type="range"]::-ms-tooltip
+  display none
+
+input[type="range"]::-webkit-slider-thumb
+  -webkit-appearance none !important
+  appearance none
+  width 4px
+  height 24px
+  border none
+  background #aaa
+
+input[type="range"]::-moz-range-thumb
+  width 4px
+  height 24px
+  border none
+  background #aaa
+
+input[type="range"]::-ms-thumb
+  width 4px
+  height 24px
+  border 0
+  background #aaa

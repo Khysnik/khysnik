@@ -1,0 +1,107 @@
+body, html {
+	margin: 0;
+	padding: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 10px);
+	background: silver;
+}
+
+#menu ul, #menu ul li{
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul li{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#content{
+	width: 100%;
+	max-width: 720px;
+	margin: 30px auto 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border-top: 1px solid #eee;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+}
+
+td, th {
+    padding: 5px;
+    /*border-bottom: 1px solid #aaa;*/
+    text-align: center;
+}
+
+.icon img{
+	width: 32px;
+	height: 32px;
+}
+
+img{
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+.mono, .apps{
+	background: lightgray;
+}
+
+.mono tr td{
+	width: 100%;
+	text-align: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.mono h2{
+	border-bottom: 1px solid #000;
+}
+
+.mono tr td:first-child{
+	width: 100px;
+	vertical-align: top;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.mono tr td:nth-child(2){
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.mono tr td:first-child button{
+	width: 100%;
+}
+
+.img100{
+	width: 100px;
+}
+
+.desc, .author, .infos, .about{
+	margin-bottom: 20px;
+}
+
+button{
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+.avatar, .screenshot{
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.screenshot{
+	width: 150px;
+	cursor: pointer;
+}

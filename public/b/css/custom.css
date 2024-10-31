@@ -1,0 +1,135 @@
+body{
+	/*transform: rotateZ(-0.2deg);*/
+}
+
+.img{
+	cursor: pointer;
+	max-width: 250px;
+	height: auto;
+	-webkit-animation-duration: 1s;
+	animation-duration: 0.1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: jello;
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+.imgZoom{
+	width: auto;
+	height: auto;
+	max-width: calc(100% - 20px);
+	-webkit-animation-duration: 1s;
+	animation-duration: 0.1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-name: tada;
+}
+
+video{
+	max-width: 250px;
+    margin: 4px 10px 10px 10px;
+    border: 0;
+    float: left;
+    clear: none;
+}
+
+#oekakistarter {
+	font-size: 10px;
+	padding-left: 10px;
+	margin: 0px;
+}
+
+#postform input[type="text"]:not(#widthselect):not(#canvasWidth):not(#canvasHeight), #postform input[type="password"]:not(#widthselect):not(#canvasWidth):not(#canvasHeight), #postform input[type="number"]:not(#widthselect):not(#canvasWidth):not(#canvasHeight), textarea {
+	width: calc( 100% - 3px );
+}
+
+#postform{
+    width: 448px;
+}
+
+#postme{
+	float: right;
+}
+
+#widthselect {
+    width: 30px;
+    margin: 2px;
+}
+
+#oekaki-canvas {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////zMzMOOqqgwAAABhJREFUeNpiYIQDBgQY0oLDxBsIQYAAAwCltADJzmw8TwAAAABJRU5ErkJggg==);
+    border-width: 1px;
+    border-radius: 0px;
+    float: left;
+    clear: none;
+    border: 1px solid #AAA !important;
+    margin: 0px;
+    margin-left: 1px;
+    padding: 0px;
+    cursor: crosshair;
+}
+
+#selectors {
+	float:left;
+}
+
+#selectors input {
+	color:white;
+}
+
+#toolselection {
+	margin:2px;
+}
+
+#widthselect, #canvasWidth, #canvasHeight {
+	width:30px;
+	margin:2px;
+}
+
+#oekaki span {
+	float:left;
+	margin:3px;
+	margin-left:3px;
+	font-family:sans-serif;
+}
+
+#picker {
+	margin:2px;
+	margin-left:3px;
+	width: 50px;
+	text-align: center;
+}
+
+#oekaki-finished {
+	margin:0px;
+	float:right;
+	margin-top: 4px;
+	float: right;
+	margin-right: -4px;
+}
+
+#oekakiApp{
+	display: none;
+}
+
+.button{
+	font: bold 11px Arial;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+}
+.adminTools, .adminTools:hover{
+	display: none;
+	text-decoration: none;
+}
+
+a.memeThis{
+	text-decoration: none;
+}

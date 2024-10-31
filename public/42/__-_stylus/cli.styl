@@ -1,0 +1,25 @@
+.ui_terminal {
+  font-family: $mono;
+  font-size: 10px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  background-color: #000;
+  color: #c3ff00;
+  padding: 5px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.ui_terminal a {
+  color: inherit;
+  border-bottom: 1px none;
+  text-decoration: none;
+}
+.ui_terminal a:hover {
+  border-bottom: 1px dotted;
+}
+.ui_terminal ::selection {
+  color: #000;
+  background: rgba(195, 255, 0, 0.99);
+  opacity: 1;
+}

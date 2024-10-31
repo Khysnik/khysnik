@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: windows93.net
+Token: 728d30fac2efeef38ff14967f578072fafaa77ebcde49751149636a18aa17724

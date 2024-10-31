@@ -1,0 +1,418 @@
+/*@keyframes corglitch {
+  0% {
+    right: -500px;
+    transform: scaleX(1);
+  }
+  50% {
+    right: 105%;
+    transform: scaleX(1);
+  }
+  51% {
+    transform: scaleX(-1);
+  }
+  100% {
+    right: -500px;
+    transform: scaleX(-1);
+  }
+}
+.app_corglitch {
+  position:fixed;
+  z-index:99999;
+  animation-name: corglitch;
+  animation-delay: 0;
+  animation-fill-mode: none;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}*/
+
+.ui_layer_3d {
+  pointer-events: none;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.cat_nav {display: flex}
+.cat_nav__input {
+  flex 1;
+  padding-left: 24px !important;
+}
+
+
+.cat_nav__favicon {
+  width: 16px;
+  height: 16px;
+  position : absolute;
+  margin-top: 3px;
+  margin-left: 3px;
+  //top: 2px;
+  //left: 20px;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.app_textarea {
+  font-family: '_tomo', monospace;
+  line-height: 1.5;
+}
+
+
+.app_emulator {
+  background: #000;
+  overflow: hidden !important;
+}
+.app_emulator canvas {
+  image-rendering:optimizeSpeed;             // Legal fallback
+  image-rendering:-moz-crisp-edges;          // Firefox
+  image-rendering:-o-crisp-edges;            // Opera
+  image-rendering:-webkit-optimize-contrast; // Safari
+  image-rendering:optimize-contrast;         // CSS3 Proposed
+  image-rendering:crisp-edges;               // CSS4 Proposed
+  image-rendering:pixelated;                 // CSS4 Proposed
+  -ms-interpolation-mode:nearest-neighbor;   // IE8+
+  border: 0;
+
+  position: absolute;
+  width: auto;
+  //max-width: 100%;
+  //min-width: attr(width px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5555;
+  margin: auto;
+}
+:-webkit-full-screen {
+  background: #000;
+}
+
+/*
+imageviewer
+/////////////////////////////////////////////////////////////////////////////*/
+.app_imageviewer {
+  padding: 0;
+  background: #fff url("/c/sys/img/carreaux.png");
+}
+
+.app_imageviewer__img {
+	padding: 0;
+	flex: 0 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+.app_piskel_layer {
+  padding: 0 !important;
+  .ui_window__head {
+    display: none;
+  }
+  .ui_window__menu {
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.poney_jockey {
+  .ui_form>div>label {
+    min-width: 15%;
+  }
+}
+
+input.ui_keyboard_combo {
+  //font-family: '_tomo';
+  margin-bottom: 20px !important;
+}
+
+.ui_keyboard_layouts {
+  display: flex;
+}
+.ui_keyboard_layouts > * {
+  flex: 1;
+}
+
+.ui_keyboard_layout--Shift,
+.ui_keyboard_layout--AltGraph,
+.ui_keyboard_layout--Shift_AltGraph,
+.ui_keyboard_layout--normal {
+  flex: 0 0 358px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+.poney_jockey__currentkey {
+  border: 1px solid #000;
+}
+
+.ui_keyboard_layout > div {
+  display : flex;
+}
+.ui_keyboard_layout > div > button {
+  //font-family: '_tomo';
+  flex: 0 0 22px;
+  text-align: left;
+}
+.ui_keyboard_layout > div:first-child {
+  margin-bottom: 5px;
+}
+.ui_keyboard_layout > div:first-child > button {
+  flex: 0 0 26px;
+  text-align: left;
+}
+.ui_keyboard_layout > div:first-child > button[data-key="Escape"] {
+  flex: 1;
+}
+
+.ui_keyboard_layout--ExtraKeys {
+  flex: 0 0 71px;
+}
+.ui_keyboard_layout--ExtraKeys > div:first-child > button,
+.ui_keyboard_layout--ExtraKeys > div > button {
+  padding-left: 3px;
+  flex: 0 0 22px;
+  text-align: left;
+}
+.ui_keyboard_layout--NumpadKeys > div > button {
+  padding-left: 3px;
+  flex: 0 0 22px;
+  text-align: left;
+}
+.ui_keyboard_layout > div > {
+
+  [data-key="Backspace"],
+  [data-key="ShiftRight"],
+  [data-key="ControlRight"],
+  [data-key="Enter"] {
+    text-align: right;
+  }
+  [data-key="Spacebar"] {
+    text-align: center;
+  }
+
+  //[data-key="Escape"],
+  [data-key="Backspace"],
+  [data-key="Tab"],
+  //[data-key="caps"],
+  [data-key="Enter"],
+  [data-key="Shift"],
+  [data-key="ShiftRight"],
+  [data-key="Spacebar"] {
+    flex: 1;
+  }
+
+  [data-key="OS"],
+  [data-key="Alt"] {
+    flex: 0 0 30px;
+  }
+  [data-key="Control"],
+  [data-key="ControlRight"],
+  [data-key="AltGraph"] {
+    flex: 0 0 35px;
+  }
+  [data-key="Tab"] {
+    flex: 0 0 35px;
+  }
+  [data-key="CapsLock"] {
+    flex: 0 0 45px;
+  }
+  [data-key="Shift"]:first-child {
+    flex: 0 0 35px;
+  }
+
+  [data-key="F4"],
+  [data-key="F8"] {
+    margin-right: 5px;
+  }
+  [data-key="Escape"] {
+    margin-right: 5px;
+  }
+
+  [data-key="OS"] {
+    font-weight: 700;
+  }
+  [data-key="OS"],
+  [data-key="Shift"],
+  [data-key="Enter"],
+  [data-key="Home"],
+  [data-key="End"],
+  [data-key="Backspace"],
+  [data-key="ShiftRight"],
+  [data-key="CapsLock"] {
+    font-size: 11px;
+  }
+  [data-key="PageUp"],
+  [data-key="PageDown"] {
+    font-size: 12px;
+  }
+
+  [data-key="ArrowUp"],
+  [data-key="ArrowDown"],
+  [data-key="ArrowLeft"],
+  [data-key="ArrowRight"] {
+    font-size: 11px;
+    //font-weight: 700;
+    text-align: center;
+  }
+}
+
+.menu_color {
+  width: 14px;
+  border-radius:100%;
+  box-shadow: 0 0 0px 1px rgba(0,0,0,.6)
+}
+
+.vignette__div {
+  position:absolute;top:0;bottom:0;left:0;right:0;width:auto;height:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+.px_layer {
+  box-sizing: content-box;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: auto;
+
+  /*
+  outline: 1px dotted rgba(0,0,0,.8);
+  min-height: 100px;
+  min-width: 100px;
+  mix-blend-mode: difference;
+    */
+}
+
+/*.px_layer--vector {
+  mix-blend-mode: exclusion;
+}*/
+.px_layer:hover {
+  cursor: url('/c/sys/cursors/move.cur'), move;
+  /*cursor: crosshair;
+  -webkit-filter: brightness(0.4) sepia(1) hue-rotate(280deg) saturate(530%);
+    */
+}
+.px_layer svg path {
+  pointer-events: auto !important;
+  /*fill: #fff;*/
+}
+.px_layer svg {
+  pointer-events: none !important;
+}
+.px_layer.active:hover {
+  cursor: url('/c/sys/cursors/cross.cur'), crosshair;
+}
+.px_layer__canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.blend_difference{
+  mix-blend-mode: difference;
+}
+.blend_overlay {
+  mix-blend-mode: overlay;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
+
+/*
+captcha
+/////////////////////////////////////////////////////////////////////////////*/
+/*.ui_captcha__contimg {
+  padding: 0 !important;
+  overflow: hidden;
+  margin-bottom: 3px;
+  height: 110px;
+}
+.ui_captcha__contimg img{
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  display: block;
+}*/
+
+
+/////////////////////////////////////////////////////////////////////////////
+/*.app_qursor_arena {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //background: red;
+  z-index: 99999;
+  cursor: none;
+}*/
+/*.app_qursor_arena--aim_mode {
+  cursor: url('/c/sys/cursors/aim.cur'), auto;
+}*/
+
+/*.app_qursor_arena__user {
+  position: absolute;
+  background: #333;
+  color: #999;
+  padding: 2px 2px;
+  line-height : 9px;
+  border: 1px solid #999;
+  //z-index: 99999;
+  transform: translateX(20px);
+}
+
+.app_qursor_arena__user:before {
+  content ' ';
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  width: 32px;
+  height: 32px;
+  background: url('/c/sys/cursors/cursor.cur')
+}
+
+.app_qursor_arena__user--fraged:before {
+  content ' ';
+  position: absolute;
+  top: -2px;
+  left: -22px;
+  width: 32px;
+  height: 32px;
+  background: url('/c/sys/cursors/skull.cur')
+}
+
+.app_qursor_arena__aim {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url('/c/sys/cursors/aim.cur')
+}*/
+
+
+
+/*.app_ie6_cnv {
+  border: 1px solid red;
+  transition: top 2ms, left 2ms;
+}*/
+
+
+
+.ui_desktop_layer.app_hl3 {
+  box-shadow: 7px 7px 13px 0 rgba(0,0,0,0.5) !important
+}

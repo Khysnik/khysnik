@@ -1,0 +1,34 @@
+CREATE DATABASE appstore;
+
+use appstore;
+
+CREATE TABLE users (
+	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	username VARCHAR(30) NOT NULL,
+	pass VARCHAR(30) NOT NULL,
+	email VARCHAR(50) NOT NULL,
+	ip VARCHAR(50),	
+	userkey VARCHAR(255),	
+	bio VARCHAR(255),	
+	location VARCHAR(50),
+	verified TINYINT(1),	
+	date TIMESTAMP
+);
+
+CREATE TABLE apps (
+	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	appname VARCHAR(30) NOT NULL,
+	creator VARCHAR(30) NOT NULL,		
+	description VARCHAR(255) NOT NULL,
+	icon VARCHAR(255),
+	screenshot VARCHAR(255),
+	type VARCHAR(10) NOT NULL,
+	category VARCHAR(50) NOT NULL,
+	ip VARCHAR(50),
+	likes VARCHAR(10),
+	version VARCHAR(10),
+	appfile VARCHAR(255),
+	appurl VARCHAR(255),
+	verified TINYINT(1),
+	date TIMESTAMP
+);

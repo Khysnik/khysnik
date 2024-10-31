@@ -1,0 +1,749 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"translate",
+				"translateY()"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"back",
+				"background-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"visi",
+				"visible"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"trn",
+				"transform"
+			],
+			[
+				"text",
+				"text-shadow"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ro",
+				"rotateX()"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"filter",
+				"filterStr"
+			],
+			[
+				"sc",
+				"scaleX"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"cons",
+				"constructor"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"class",
+				"classList"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"or",
+				"originalWidth"
+			],
+			[
+				"layr",
+				"layers"
+			],
+			[
+				"for",
+				"for	improved for loop"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"forin",
+				"forin	for in own properties"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/zo/www/windows93.dev/vj/public/tests/zo.php",
+			"settings":
+			{
+				"buffer_size": 160164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/various/autobot.svg",
+			"settings":
+			{
+				"buffer_size": 1251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "3d.js",
+			"settings":
+			{
+				"buffer_size": 10504,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "css",
+		"selected_items":
+		[
+			[
+				"css",
+				"Set Syntax: CSS3"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"as",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"sty",
+				"Set Syntax: Stylus"
+			],
+			[
+				"pr",
+				"Package Control: Remove Package"
+			],
+			[
+				"apa",
+				"Set Syntax: Apache Conf"
+			]
+		],
+		"width": 344.0
+	},
+	"console":
+	{
+		"height": 426.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/zo/www/windows93.dev/vj/public",
+		"/home/zo/www/windows93.dev/vj/public/42",
+		"/home/zo/www/windows93.dev/vj/public/42/js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX",
+		"/home/zo/www/windows93.dev/vj/public/42/js/img",
+		"/home/zo/www/windows93.dev/vj/public/c",
+		"/home/zo/www/windows93.dev/vj/public/c/files",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/shape",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/various"
+	],
+	"file_history":
+	[
+		"/home/zo/www/windows93.dev/vj/public/42/js/IN/Key.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js93/apps/vignette.js",
+		"/home/zo/www/windows93.dev/vj/public/42/stylus/apps.styl",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX/Layer.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX/Raster.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX/Vector.js",
+		"/home/zo/www/windows93.dev/vj/public/index.php",
+		"/home/zo/www/windows93.dev/v2/public/42/js/sys/apps/pony.js",
+		"/home/zo/www/windows93.dev/vj/public/42/stylus/log.styl",
+		"/home/zo/.xbindkeysrc",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/barclay.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/blizzard.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/electronic_arts.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/jai_lu.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/le_livre_de_poche.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/league_of_legends.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/marvel.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/philips.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/tinder.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/vevo.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/music/acdc.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/05.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/06.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/07.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/08.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/09.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/10.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/11.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/12.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/13.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/14.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/15.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/16.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/17.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/18.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/19.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/20.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/21.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/22.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/anchor.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/bower.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/caniche.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/cat.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/copyleft.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/cow.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/dear.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/diamond.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/dna.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/dog.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/dolphin.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/dropbox.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/duck.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/eagle.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/elephant.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/espadon.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/fedora.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/festival_de_canne.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/flickr.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/gnu.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/jumpman.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/lama.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/mamuth.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/mdn.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/medusa.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/opensuse.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/poson.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/rhino.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/scorpion.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/shark.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/shrimp.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/squirel.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/tatoo.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/teeth.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/twitch.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/atom.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/bear.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/01.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/02.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/03.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/04.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/usb.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/vimeo.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/vine.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/w3c.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/new/wordpress.svg",
+		"/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/various/batman.svg",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX/Scene.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/UI/Selection.js",
+		"/home/zo/www/madja.dev/public/index.php",
+		"/home/zo/www/madja.dev/src/stylus/eyes.styl",
+		"/home/zo/www/madja.dev/public/form.php",
+		"/home/zo/www/madja.dev/public/inc/head.php",
+		"/home/zo/www/madja.dev/public/inc/foot.php",
+		"/home/zo/Downloads/[www.Cpasbien.pe] Adobe_Creative_Suite_CS6_Master_Collection_MULTI/Instructions.txt",
+		"/home/zo/www/madja.dev/public/css/arrow.svg",
+		"/home/zo/www/madja.dev/public/_form.php",
+		"/home/zo/Downloads/[www.Cpasbien.pe] Adobe_Creative_Suite_CS6_Master_Collection_MULTI/Serial Adobe Master Collection CS6.txt",
+		"/home/zo/www/madja.dev/public/css/vhs.svg",
+		"/home/zo/www/therecombinants.dev/public/42/js93/apps/vignette.js",
+		"/home/zo/www/therecombinants.dev/public/c/effects.svg",
+		"/home/zo/www/therecombinants.dev/public/index.php",
+		"/home/zo/www/madja.dev/public/_index.php",
+		"/home/zo/www/therecombinants.dev/public/42/build.js",
+		"/home/zo/www/therecombinants.dev/public/42/js93/apps/cadre.js",
+		"/home/zo/www/therecombinants.dev/public/42/stylus/skins/w93.styl",
+		"/home/zo/www/therecombinants.dev/public/42/stylus/sys42.styl",
+		"/home/zo/www/therecombinants.dev/public/42/js93/sys/exe.js",
+		"/home/zo/www/madja.dev/public/index.css",
+		"/home/zo/www/therecombinants.dev/public/42/inc/head.php",
+		"/home/zo/www/therecombinants.dev/public/42/js/IN/Key.js",
+		"/home/zo/www/therecombinants.dev/public/42/js93/boot/reveal.js",
+		"/home/zo/www/therecombinants.dev/public/42/js93/boot/desktop.js",
+		"/home/zo/www/madja.dev/public/eyes.css",
+		"/home/zo/www/madja.dev/gulpfile.js",
+		"/home/zo/www/madja.dev/public/css/magic.css",
+		"/home/zo/www/windows93.dev/vj/public/c/programs/filter/index.php",
+		"/home/zo/www/madja.dev/src/stylus/index.styl",
+		"/home/zo/www/madja.dev/public/sources/css-vhs-glitch-master/demo/index.html",
+		"/home/zo/www/madja.dev/package.json",
+		"/home/zo/www/windows93.dev/vj/public/42/js/img/old/px.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/io.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/ui/resize.js",
+		"/home/zo/www/windows93.dev/vj/public/42/mol.php",
+		"/home/zo/www/windows93.dev/vj/public/42/tests/API/History.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/watch.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/PX/Gif.js",
+		"/home/zo/www/windows93.dev/vj/public/42/tests/undo.js",
+		"/home/zo/www/windows93.dev/vj/public/42/js/API/History.js"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+			"/home/zo/www/windows93.dev/vj/public/42/stylus",
+			"/home/zo/www/therecombinants.dev/public/42/stylus",
+			"/home/zo/www/windows93.dev/vj/public/42/js93",
+			"/home/zo/www/windows93.dev/vj/public/c/files/images/shapes",
+			"/home/zo/www/windows93.dev/vj/public/42/js93"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ui_log__red",
+			"exeJS",
+			"joystick",
+			"buttonPressed",
+			"fx_reset",
+			"ctrl",
+			"console",
+			"selection.list",
+			"history",
+			"_getPos",
+			"this.img",
+			"this.source",
+			"resize",
+			"this._iPos",
+			"cfg",
+			"rescale",
+			"[f]",
+			"[key]",
+			"0",
+			"scanlines",
+			"z-in",
+			"fake",
+			"mono",
+			"p",
+			"</p>",
+			"<p>",
+			"div",
+			"this",
+			"div",
+			"1000%)",
+			"100%)",
+			"100%",
+			"slideDown",
+			"next",
+			"id=\"question",
+			"auricle",
+			"100px",
+			"div",
+			"label",
+			"vanishIn",
+			"setTimepout",
+			"image",
+			"Image",
+			"image",
+			"after",
+			"before",
+			"after",
+			"before",
+			"div",
+			"317px",
+			"div",
+			"darken",
+			"tatoo",
+			"div",
+			"line-he",
+			"px_sans_nouveaux",
+			"font",
+			"that",
+			"openLink",
+			"opt",
+			"layer",
+			"fx_vhs",
+			"px_sans_nouveaux",
+			"grad",
+			"devmode",
+			"tatoo",
+			".scanlines",
+			"after",
+			"before",
+			"div",
+			"timeinterval",
+			"'",
+			";",
+			"secondsSpan",
+			"minutesSpan",
+			"hoursSpan",
+			"daysSpan",
+			"smalltext",
+			"#clockdiv",
+			"braaaaaaaaaaaaaaaaaaaain",
+			"final",
+			"fx_vhsint",
+			"scanLines",
+			"multiply",
+			"fx_vhsint",
+			"25",
+			".5",
+			"10",
+			"dy",
+			"-1",
+			"svg_vhs",
+			"vhs",
+			"main",
+			"vhs",
+			"current",
+			"bg",
+			"vanishIn",
+			"img",
+			"Img",
+			"img",
+			"Img",
+			"img",
+			"wrap",
+			"createFile",
+			"_ondown",
+			"splice",
+			"pageup",
+			"pagedown",
+			"previousCenterX",
+			"rescale",
+			"layer.scaleY",
+			"layer.scaleX",
+			"layer",
+			"drawn",
+			"_img",
+			"this.img",
+			"this",
+			"this.img",
+			"_img",
+			"_setSize",
+			"layer",
+			"previousCenterX",
+			"cancelTransform",
+			"_mCFG",
+			"_iPos",
+			"this._height",
+			"this._width",
+			"this_iH"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/zo/www/windows93.dev/vj/public/tests/zo.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 160164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								753,
+								753
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/zo/www/windows93.dev/vj/public/c/files/images/vj/shapes/various/autobot.svg",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "3d.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1450,
+								1450
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "svg.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/www/mantra.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 300.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

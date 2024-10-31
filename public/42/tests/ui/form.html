@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+</head>
+<body>
+
+<script>
+//$alert.form('Create Shortcut', {title:'Game', url:'/c/libs/', icon:'trophy.gif'});
+
+$window.form('Create Shortcut', {
+  schema: {
+    "type": "object",
+    "properties": {
+
+      "icon": {
+        "type": "string",
+        "plugin": {
+          "icon": {
+            "watch": "target"
+          }
+        }
+      },
+      "title": {
+        "type": "string",
+        "placeholder": "Leave blank to use same name as target",
+      },
+      "target": {
+        "title": "target/url",
+        "type": "string",
+        "placeholder": "http://",
+        "plugin": {
+          "explorer": {
+            "accept": "*",
+            "path": "$HOME"
+          }
+        }
+      }
+      /*,
+      "iconAuto": {
+        "title": "icon auto",
+        "type": "boolean",
+        "default": true,
+        "ignore": true
+      }*/
+    }
+  }
+}, function(obj) {
+  console.log(123, obj);
+});
+
+  /*//$ajax.post('/iframe.php', {url:'http://gameaboutsquares.com/'}).done(function(arg) {
+  //$ajax.post('/iframe.php', {url:'http://www.google.com/'}).done(function(arg) {
+  $ajax.post('/iframe.php', {url:'https://www.facebook.com/'}).done(function(arg) {
+    console.log(arg)
+  });*/
+
+  /*console.log($extend('active', {}, {toto:function() {
+    console.log('toto')
+  }}));*/
+
+  /*$window.form('Create Shortcut', {
+    version: 1,
+    userData: {
+      nick: 'anonymous',
+      localInit: false,
+      lastVisit: new Date()
+    },
+    skin: 'w93',
+    history: ["fx convo","ls","help","acid","cd /","cd c/libs/","tree","ls","cd","cd /","cd ~","ls","cd .config/","cd ../","cd .config/","ls","help","win","info","help","history","help","global thermonuclear war","help"],
+    sounds: {
+       boot: '/c/sys/boot/boot.ogg'
+      ,alert: '/c/sys/sounds/CHORD.ogg'
+      ,error: '/c/sys/sounds/QUACK.ogg'
+    },
+    noSplash: false,
+    defaultApp: {
+      //xml: 'edit',
+       html: 'iframe'
+      ,htm: 'iframe'
+      ,php: 'iframe'
+      ,svg: 'codem'
+      ,gif: 'img'
+      ,png: 'img'
+      ,jpeg: 'img'
+      ,jpg: 'img'
+    }
+  });*/
+
+  /*
+  {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string"
+      },
+      "icon": {
+        "type": "string"
+      }
+    }
+  }
+  */
+  //$explorer('/c/programs/', {silent:true});
+</script>
+  <script>
+  $alert.form('Create Shortcut', {
+    //data: {title:'Game', url:'/c/libs/', icon:'trophy.gif'},
+    schema: {
+      "title": "Person",
+      "type": "object",
+      "id": "person",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "First and Last name",
+          "minLength": 4
+        },
+        "age": {
+          "type": "integer",
+          "default": 21,
+          "minimum": 18,
+          "maximum": 99
+        },
+        "gender": {
+          "type": "string",
+          "enum": [
+            "male",
+            "female"
+          ]
+        },
+        "location": {
+          "type": "object",
+          "title": "Location",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "state": {
+              "type": "string"
+            },
+            "citystate": {
+              "type": "string",
+              "description": "This is generated automatically from the previous two fields",
+              "template": "{{city}}, {{state}}",
+              "watch": {
+                "city": "person.location.city",
+                "state": "person.location.state"
+              }
+            }
+          }
+        },
+        "pets": {
+          "type": "array",
+          "format": "table",
+          "title": "Pets",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": [
+                  "cat",
+                  "dog",
+                  "bird",
+                  "reptile",
+                  "other"
+                ],
+                "default": "dog"
+              },
+              "name": {
+                "type": "string"
+              },
+              "fixed": {
+                "type": "boolean",
+                "title": "spayed / neutered"
+              }
+            }
+          }
+        }
+      }
+    }
+    /*schema: {
+      type: "object",
+      title: "Car",
+      properties: {
+        make: {
+          type: "string",
+          enum: [
+            "Toyota",
+            "BMW",
+            "Honda",
+            "Ford",
+            "Chevy",
+            "VW"
+          ]
+        },
+        model: {
+          type: "string",
+          default: "Generic"
+        },
+        year: {
+          type: "integer",
+          enum: [
+            1995,1996,1997,1998,1999,
+            2000,2001,2002,2003,2004,
+            2005,2006,2007,2008,2009,
+            2010,2011,2012,2013,2014
+          ],
+          default: 2008
+        }
+      }
+    }*/
+  });
+  /*$alert.form('Create Shortcut', {
+    //data: {title:'Game', url:'/c/libs/', icon:'trophy.gif'},
+    schema: {
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "title": "URL",
+          "type": "string",
+          "format": "url"
+        },
+        "icon": {
+          "title": "Icon",
+          "type": "string",
+          "format": "url",
+          "option": {
+            "icon": true
+          }
+        }
+      }
+    }
+  });*/
+  /*$alert.form({
+    version: 1,
+    userData: {
+      nick: 'anonymous',
+      localInit: false,
+      lastVisit: new Date()
+    },
+    skin: 'w93',
+    history: ["fx convo","ls","help","acid","cd /","cd c/libs/","tree","ls","cd","cd /","cd ~","ls","cd .config/","cd ../","cd .config/","ls","help","win","info","help","history","help","global thermonuclear war","help"],
+    sounds: {
+       boot: '/c/sys/boot/boot.ogg'
+      ,alert: '/c/sys/sounds/CHORD.ogg'
+      ,error: '/c/sys/sounds/QUACK.ogg'
+    },
+    noSplash: false,
+    defaultApp: {
+      //xml: 'edit',
+       html: 'iframe'
+      ,htm: 'iframe'
+      ,php: 'iframe'
+      ,svg: 'codem'
+      ,gif: 'img'
+      ,png: 'img'
+      ,jpeg: 'img'
+      ,jpg: 'img'
+    }
+  }, 'Settings', {
+    schema: {
+
+    }
+  });*/
+  </script>
+</body>
+</html>

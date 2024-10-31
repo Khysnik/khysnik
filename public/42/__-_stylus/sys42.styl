@@ -1,0 +1,221 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+
+
+
+
+}
+
+/* body {
+  text-rendering: optimizeLegibility;
+}
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+:invalid {
+  box-shadow: none;
+}
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+
+template
+  display none
+
+iframe
+  border 0 none
+  background transparent
+
+button
+  cursor: pointer
+
+textarea
+  resize none
+  height auto
+  overflow auto
+  text-indent 0
+
+// p {
+//   word-break: break-word;
+//   max-width: 100%;
+// }
+
+$mono = 'Ubuntu Mono',Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,'Menlo','source-code-pro',"Courier New",Courier,monospace;
+
+
+@import "normalize"
+//@import "reset"
+//@import "desktop"
+@import "window"
+@import "menu"
+@import "explorer"
+@import "log"
+@import "cli"
+@import "effects"
+@import "oocss"
+@import "ui"
+@import "apps"
+@import "animate"
+
+/////////////////////////////////////////////////////////////////////////////
+
+/*#s42_clock {
+  padding-left: 5px;
+  padding-top: 0px;
+  //width: 30px;
+  //display: inline-block;
+  cursor: help;
+}*/
+#s42_start,
+.ui_window_docked {
+  height 22px
+  margin-left 3px
+  margin-bottom 1px
+  padding-bottom 0
+}
+#s42_start *,
+.ui_window_docked * {
+  vertical-align middle
+}
+#s42_start {
+  margin-left 0
+  margin-right 0
+}
+#s42_notif {
+  display: flex;
+  padding: 0 5px;
+  padding-top: 3px;
+}
+#s42_notif > * {
+  height: 16px;
+  padding-right: 5px;
+}
+#s42_clock {
+  width: 5ch
+}
+
+
+/**/
+
+
+#s42_canvas canvas,
+#s42_canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/*#s42_canvas canvas {
+  border: 2px solid red
+}*/
+
+
+#s42_dock {
+  overflow-x auto
+}
+
+#s42_dock::-webkit-scrollbar {
+  height: 1px;
+  width: 1px;
+  background: transparent;
+}
+#s42_dock::-webkit-scrollbar-thumb {
+  background: #000;
+}
+#s42_dock::-webkit-scrollbar-corner {
+  background: #000;
+}
+
+
+
+#s42_screen div[data-exe="castlegafa"] * {
+  cursor: url('/c/sys/cursors/metal.cur'), pointer !important;
+}
+
+/*from index.php*/
+#ui_explorer_0 > .ui_icon>span {
+  word-break: break-word;
+  word-wrap: break-word;
+  max-height: 100px;
+}
+.u-scroll-y {
+  overflow-y: scroll !important;
+}
+.ui_window {
+  box-shadow: 1px 0 #000, 0 1px #000, 1px 1px #000, inset 1px 1px #fff;
+}
+
+
+// debug
+/////////////////////////////////////////////////////////////////////////////
+/*.ui_debug_all {
+  .js-resizer {
+    background: rgba(0,0,255,0.5)
+  }
+  .js-resizer-topleft,
+  .js-resizer-topright,
+  .js-resizer-bottomleft,
+  .js-resizer-bottomright {
+    background rgba(0,255,0,0.5)
+  }
+  .js-mask {
+    background rgba(0,255,0,0.5)
+  }
+  .ui_menu--scroller.ui_menu--scroller--active > .ui_menu__right_handler {
+    background: rgba(0,0,255,0.5)
+  }
+}
+.js-mask {
+  background rgba(0,255,0,0.5)
+}
+*/
+
+
+
+/*#html2canvas,
+#degub_canvas {
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+}
+#degub_canvas {
+  pointer-events: none
+}*/
+/*#s42_dock {
+  overflow hidden
+}
+#s42_desktop {
+  overflow hidden
+}*/
+/*#s42_icons {
+  padding 3px
+  overflow-y auto
+  overflow-x: hidden;
+  width: 100%;
+}*/
+
+
+
+
+/******/

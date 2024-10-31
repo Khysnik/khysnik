@@ -1,0 +1,362 @@
+/*
+////////////////////////////////////////////////////////////////////////////////
+// ***** BEGIN LICENSE BLOCK *****
+// This file is part of ChuWiki.
+// Copyright (c) 2004 Vincent Robert and contributors. All rights
+// reserved.
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA//
+//
+// ***** END LICENSE BLOCK *****
+////////////////////////////////////////////////////////////////////////////////
+*/
+
+@media screen {
+
+html, table, textarea
+{
+	font-family: Georgia, serif;
+	font-size: 100%;
+}
+
+html
+{
+	background: #fff;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	margin: 1em;
+	padding: 0;
+}
+
+code, pre
+{
+	font-family: monospace;
+}
+
+pre
+{
+	border: 1px solid #BBB;
+	background: #DDD;
+	margin: 1em;
+	padding: 1em;
+	overflow: auto;
+	line-height: 1em;
+}
+
+blockquote
+{
+	border-left: 1ex solid #ccc;
+	padding-left: 1ex;
+}
+
+p
+{
+	text-align: justify;
+}
+
+li
+{
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+td, th
+{
+	border: 1px solid #000;
+}
+
+dt
+{
+    margin-top: 0.5em;
+}
+
+q:before
+{
+	content: "\ab\a0";
+}
+
+q:after
+{
+	content: "\a0\bb";
+}
+
+q[lang]:after
+{
+	content: "\a0\bb\a0[" attr(lang) "]";
+}
+
+a[hreflang]:after
+{
+	content: "\a0[" attr(hreflang) "]";
+}
+
+/* Titre
+************************************************************/
+#Logo
+{
+    font-size: 2em;
+    color: #999;
+    line-height: 1em;
+    margin: 0 0 0 0;
+}
+
+#Logo a
+{
+    color: #999;
+	text-decoration: none;
+}
+
+h1
+{
+	color: #111;
+	margin: 0 0 0 1ex;
+}
+
+h2
+{
+    color: #119;
+    border-bottom: 1px solid #119;
+}
+
+h3
+{
+	color: #191;
+	font-weight: normal;
+}
+
+/* Barre d'outils
+************************************************************/
+#UtilsSeparator
+{
+	display: none;
+}
+
+#Utils
+{
+	position: absolute;
+	font-size: 80%;
+	padding: 5px 0;
+	margin: 0;
+	right: 1em;
+	top: 0.5em;
+}
+
+#Utils li
+{
+	display: inline;
+	padding: 4px 0;
+}
+
+#Utils li p 
+{
+	display: inline;
+	margin: 0;
+}
+
+#Utils li a, input
+{
+	border: 1px solid #666;
+	border-color: #aaa #666 #666 #aaa;
+	background: #F2F2F2 url(../default/gfx/tb.png) repeat-x;
+	padding: 0.3em 2ex;
+	color: #333;
+	text-decoration: none;
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+}
+
+#Search input
+{
+	background: #fff;
+	border-color: #666 #aaa #aaa #666;
+	padding: 0.3em 1ex;
+}
+
+#Search input.Button
+{
+	background: #F2F2F2 url(../default/gfx/tb.png) repeat-x;
+	padding: 0.22em 2ex;
+	border-color: #aaa #666 #666 #aaa;
+}
+
+#Utils li a:hover{
+	color: #000;
+	background: #EEE url(../default/gfx/tbh.png) repeat-x;
+	border-color: #000;
+}
+
+#Search
+{
+	display: inline;
+}
+
+#Search input
+{
+	margin: 0 0.5ex;
+}
+
+/* Contenu
+************************************************************/
+#Content
+{
+	padding: 1px 4ex 1px 2ex;
+	margin: 0 0 1em 0;
+	width: 80ex;
+	line-height: 1.5em;
+	float: left;
+	overflow: hidden;
+}
+
+#Content.Preview
+{
+	background: #FFF url(../default/gfx/preview.png) no-repeat right top;
+}
+
+/* Menu
+************************************************************/
+#Menu
+{
+	font-family: Verdana, Helvetica, sans-serif;
+	float: left;
+	margin: 1em 0;
+	padding: 1em 2ex;
+    width: 20ex;
+	font-size: 80%;
+	border-left: 1px solid #999;
+}
+#Menu h2
+{
+	font-size: 120%;
+	border-bottom: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* Edit Mode
+************************************************************/
+form div, #PPreviewSave
+{
+	margin: 1em 2ex;
+	clear: both;
+}
+
+#PPreviewSave input
+{
+	font-size: 90%;
+	padding: 0.22em 2ex;
+}
+
+#Wiki
+{
+	border: 1px solid #CCC;
+	margin: 0 0 0 0;
+}
+
+textarea, select, input
+{
+	margin: 0;
+}
+textarea, select
+{
+	width: 100%;
+	border: 1px solid #ccc;
+}
+
+#PDate
+{
+	margin: 0;
+	padding: 0;
+}
+
+#Rules
+{
+	background: #fff;
+	border: 1px solid #CCC;
+	padding: 1em 2ex;
+	margin: 1em 2ex;
+}
+
+#Rules dt
+{
+    margin-top: 1em;
+}
+
+#Rules dt code
+{
+    color: #191;
+}
+
+} /* @media screen */
+
+@media print
+{
+html, table, textarea, input
+{
+	font-family: Georgia, serif;
+	font-size: 100%;
+}
+
+html, body
+{
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background: #fff;
+}
+
+#Logo, #UtilsSeparator, #Utils, #Menu
+{
+	display: none;
+}
+
+h1, h2, h3, h4
+{
+	text-align: left;
+	color: #000;
+}
+
+h2
+{
+	border-bottom: 1px solid #000;
+}
+
+pre
+{
+	border: 1px solid #ddd;
+	background: #eee;
+	padding: 0.5em 0;
+}
+
+a
+{
+	color: #000;
+}
+
+a:after
+{
+	content: " (" attr(href) ")";
+}
+
+} /* @media print */
